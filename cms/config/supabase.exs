@@ -1,11 +1,5 @@
 import Config
 
-config :cms, CMS.Repo,
-  url: System.get_env("DATABASE_URL"),
-  ssl: true,
-  socket_options: [:inet6],
-  pool_size: 10 
-
 defmodule CMS.Supabase do
   def config do
     %{
@@ -16,12 +10,15 @@ defmodule CMS.Supabase do
   end
   
   def client do
-    Req.new(
-      base_url: config().url,
-      headers: [
-        {"apikey", config().api_key},
-        {"Content-Type", "application/json"}
-      ]
-    )
+    config = config()
+    fn ->
+      %{
+        base_url: config.url,
+        headers: [
+          {"apikey", config.api_key},
+          {"Content-Type", "application/json"}
+        ]
+      }
+    end
   end
 end

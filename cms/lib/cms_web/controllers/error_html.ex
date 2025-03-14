@@ -4,7 +4,7 @@ defmodule CmsWeb.ErrorHTML do
 
   See config/config.exs.
   """
-  use CMSWeb, :html  # If you want to customize your error pages,
+  use CmsWeb, :html  # If you want to customize your error pages,
   # uncomment the embed_templates/1 call below
   # and add pages to the error directory:
   #

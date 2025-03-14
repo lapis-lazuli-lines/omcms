@@ -1,5 +1,5 @@
 defmodule CmsWeb.PageController do
-  use CMSWeb, :controller
+  use CmsWeb, :controller
 
   def home(conn, _params) do
     # The home page is often custom made,

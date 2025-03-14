@@ -1,19 +1,19 @@
-defmodule CMSWeb.Router do
-  use CMSWeb, :router
+defmodule CmsWeb.Router do
+  use CmsWeb, :router
   
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, html: {CMSWeb.Layouts, :root}
+    plug :put_root_layout, html: {CmsWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
-    plug CMSWeb.Plugs.AuthPlug
+    plug CmsWeb.Plugs.AuthPlug
   end
   
   # ... other pipeline definitions
   
-  scope "/", CMSWeb do
+  scope "/", CmsWeb do
     pipe_through :browser
     
     get "/", PageController, :home
@@ -27,7 +27,7 @@ defmodule CMSWeb.Router do
   end
   
   # Define routes that require authentication
-  scope "/app", CMSWeb do
+  scope "/app", CmsWeb do
     pipe_through [:browser, :require_authenticated_user]
     
     # Protected routes

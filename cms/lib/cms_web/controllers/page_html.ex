@@ -4,5 +4,7 @@ defmodule CmsWeb.PageHTML do
 
   See the `page_html` directory for all templates available.
   """
-  use CMSWeb, :html  embed_templates "page_html/*"
+  use CmsWeb, :html
+  
+  embed_templates "page_html/*"
 end

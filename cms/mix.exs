@@ -19,7 +19,7 @@ defmodule Cms.MixProject do
       # Phoenix defaults will be here...
       {:ecto_sql, "~> 3.10"},
       {:postgrex, ">= 0.0.0"},
-      {:req, "~> 0.4.0"},  # HTTP client for Supabase API
+    {:req, "~> 0.5.0"},  # Updated to compatible version
       {:joken, "~> 2.5"},  # JWT handling
       {:jason, "~> 1.4"},  # JSON encoding/decoding
 
@@ -39,7 +39,7 @@ defmodule Cms.MixProject do
        app: false,
        compile: false,
        depth: 1},
-      {:swoosh, "~> 1.5"},
+    {:swoosh, "~> 1.18.2"},
       {:finch, "~> 0.13"},
       {:telemetry_metrics, "~> 1.0"},
       {:telemetry_poller, "~> 1.0"},

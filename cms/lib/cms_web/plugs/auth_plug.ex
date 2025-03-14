@@ -1,4 +1,4 @@
-defmodule CMSWeb.Plugs.AuthPlug do
+defmodule CmsWeb.Plugs.AuthPlug do
   import Plug.Conn
   alias CMS.Accounts
   

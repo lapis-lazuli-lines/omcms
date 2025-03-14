@@ -1,5 +1,5 @@
-defmodule CMSWeb.AuthController do
-  use CMSWeb, :controller
+defmodule CmsWeb.AuthController do
+  use CmsWeb, :controller
   alias CMS.Accounts
   
   def register(conn, _params) do
